@@ -1,0 +1,142 @@
+extends layout
+
+block content
+  header.app-header
+    #app-sidepanel.app-sidepanel-toggle
+      #sidepanel-drop.sidepanel-drop
+      .sidepanel-inner.d-flex.flex-column.mt-5
+        nav#app-nav-main.app-nav.app-nav-main.flex-grow-1.mt-5
+          ul#menu-accordion.app-menu.list-unstyled.accordion
+            li.nav-item
+              a#user-dropdown-toggle.app-utility-item.px-5
+                img(src='/images/testimonial-2.jpg' alt='user profile')
+            li.nav-item
+              a.nav-link.active(href='profile.html')
+                span.nav-icon
+                  svg.bi.bi-house-door(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                    path(fill-rule='evenodd' d='M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z')
+                    path(fill-rule='evenodd' d='M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z')
+                span.nav-link-text Overview
+            li.nav-item.has-submenu
+              a.nav-link.submenu-toggle(href='#' data-bs-toggle='collapse' data-bs-target='#submenu-1' aria-expanded='false' aria-controls='submenu-1')
+                span.nav-icon
+                  svg.bi.bi-files(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                    path(fill-rule='evenodd' d='M4 2h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4z')
+                    path(d='M6 0h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1H4a2 2 0 0 1 2-2z')
+                span.nav-link-text Courses
+                span.submenu-arrow
+                  svg.bi.bi-chevron-down(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                    path(fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z')
+                #submenu-1.collapse.submenu.submenu-1(data-bs-parent='#menu-accordion')
+                  ul.submenu-list.list-unstyled
+                    li.submenu-item
+                      a.submenu-link(href='activecourse.html') Active Courses
+                    li.submenu-item
+                      a.submenu-link(href='completecourse.html') Completed Courses
+                    li.submenu-item
+                      a.submenu-link(href='availablecourse.html') Available Courses
+            li.nav-item
+              a.nav-link(href='completecourse.html')
+                span.nav-icon
+                  svg.bi.bi-card-list(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                    path(fill-rule='evenodd' d='M14.5 3h-13a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z')
+                    path(fill-rule='evenodd' d='M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z')
+                    circle(cx='3.5' cy='5.5' r='.5')
+                    circle(cx='3.5' cy='8' r='.5')
+                    circle(cx='3.5' cy='10.5' r='.5')
+                span.nav-link-text Orders
+            li.nav-item
+              a.nav-link(href='signin.html')
+                //- span.nav-link-text Signout
+                a.btn.btn-danger(href='/signout' style='border-radius: 15px') Signout
+  .app-wrapper.bg-light
+    .app-content.pt-3.p-md-3.p-lg-4
+      .container-xl
+        h1.app-page-title Overview
+        .app-card.alert.alert-dismissible.shadow-sm.mb-4.border-left-decoration(role='alert')
+          .inner
+            .app-card-body.p-3.p-lg-4
+              h3.mb-3 Welcome, #{fullname} !
+              .row.gx-5.gy-3
+                .col-12.col-lg-9
+                  div This portal is the overview information.
+                    .col-12.col-lg-3
+              button.btn-close(type='button' data-bs-dismiss='alert' aria-label='Close')
+            .row.g-4.mb-4
+              .col-6.col-lg-4
+                .app-card.app-card-stat.shadow-sm.h-100
+                  .app-card-body.p-3.p-lg-4
+                    h4.stats-type.mb-1 Completed Courses
+                    .stats-figure 5
+                    .stats-meta.text-success
+                      svg.bi.bi-arrow-up(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                        path(fill-rule='evenodd' d='M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z')
+                        |  25%
+                  a.app-card-link-mask(href='completecourse.html')
+              .col-6.col-lg-4
+                .app-card.app-card-stat.shadow-sm.h-100
+                  .app-card-body.p-3.p-lg-4
+                    h4.stats-type.mb-1 Active Courses
+                    .stats-figure 20
+                    .stats-meta.text-success
+                      svg.bi.bi-arrow-up(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                        path(fill-rule='evenodd' d='M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z')
+                        |  55%
+                a.app-card-link-mask(href='activecourse.html')                         
+              .col-6.col-lg-4
+                .app-card.app-card-stat.shadow-sm.h-100
+                  .app-card-body.p-3.p-lg-4
+                    h4.stats-type.mb-1 Not completed Courses
+                    .stats-figure 15
+                    .stats-meta.text-success
+                      svg.bi.bi-arrow-down(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                        path(fill-rule='evenodd' d='M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z')
+                        |  45%
+                  a.app-card-link-mask(href='#')                  
+            .row.g-4.mb-4
+              .col-12.col-lg-12
+                .app-card.app-card-progress-list.h-100.shadow-sm
+                  .app-card-header.p-3
+                    .row.justify-content-between.align-items-center
+                      .col-auto
+                        h4.app-card-title Progress
+                      .col-auto
+                        .card-header-action
+                          a(href='/activecourse.html') All courses
+                  .app-card-body
+                    .item.p-3
+                      .row.align-items-center
+                        .col
+                          .title.mb-1 Basic HTML Course
+                            .progress
+                              .progress-bar.bg-success(role='progressbar' style='width: 25%;' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100')
+                                .col-auto
+                                  svg.bi.bi-chevron-right(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                                    path(fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z')
+                    .item.p-3
+                      .row.align-items-center
+                        .col
+                          .title.mb-1 Introduction to MongoDB
+                            .progress
+                              .progress-bar.bg-success(role='progressbar' style='width: 34%;' aria-valuenow='34' aria-valuemin='0' aria-valuemax='100')
+                                .col-auto
+                                  svg.bi.bi-chevron-right(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                                    path(fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z')
+                    .item.p-3
+                      .row.align-items-center
+                        .col
+                          .title.mb-1 Learn To Build An Elearning Website Using NodeJS
+                            .progress
+                              .progress-bar.bg-success(role='progressbar' style='width: 68%;' aria-valuenow='68' aria-valuemin='0' aria-valuemax='100')
+                                .col-auto
+                                  svg.bi.bi-chevron-right(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                                    path(fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z')
+                    .item.p-3
+                      .row.align-items-center
+                        .col
+                          .title.mb-1 Learn To Build Apps With ECMAScript ES2015
+                            .progress
+                              .progress-bar.bg-success(role='progressbar' style='width: 52%;' aria-valuenow='52' aria-valuemin='0' aria-valuemax='100')
+                                .col-auto
+                                  svg.bi.bi-chevron-right(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                                    path(fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z')

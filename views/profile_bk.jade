@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    h1 Profile
+    br
+    br
+    .wrapper
+        .logo
+            img(src='/images/amongtrees.png' alt='among trees')
+        .text-center.mt-4.name Welcome to your profile #{fullname} 
+    a.btn.btn-danger(href='/signout' style='border-radius: 15px') Signout

@@ -1,0 +1,138 @@
+extends layout
+
+block content
+
+  .container-fluid.bg-primary.py-5.mb-5.page-header2
+    .container.py-5
+      .row.justify-content-center
+        .col-lg-10.text-center
+          h1.display-3.text-white.animated.slideInDown Courses
+          nav(aria-label='breadcrumb')
+            ol.breadcrumb.justify-content-center
+              li.breadcrumb-item
+                a.text-white(href='/index') Home
+              li.breadcrumb-item.text-white.active(aria-current='page') Courses
+    // Header End
+    // Categories Start
+  .container-xxl.py-5.category
+    .container
+      .text-center.wow.fadeInUp(data-wow-delay='0.1s')
+        h6.section-title.bg-white.text-center.text-primary.px-3 Categories
+        h1.mb-5 Courses Categories
+      .row.g-3
+        .col-lg-7.col-md-6
+          .row.g-3
+            .col-lg-12.col-md-12.wow.zoomIn(data-wow-delay='0.1s')
+              a.position-relative.d-block.overflow-hidden(href='/webdesign')
+                img.img-fluid(src='/images/cat-1.jpg' alt='')
+                .bg-white.text-center.position-absolute.bottom-0.end-0.py-2.px-3(style='margin: 1px;')
+                  h5.m-0 Web Design
+                  small.text-primary 49 Courses
+            .col-lg-6.col-md-12.wow.zoomIn(data-wow-delay='0.3s')
+              a.position-relative.d-block.overflow-hidden(href='/webdesign')
+                img.img-fluid(src='/images/cat-2.jpg' alt='')
+                .bg-white.text-center.position-absolute.bottom-0.end-0.py-2.px-3(style='margin: 1px;')
+                  h5.m-0 Graphic Design
+                  small.text-primary 49 Courses
+            .col-lg-6.col-md-12.wow.zoomIn(data-wow-delay='0.5s')
+              a.position-relative.d-block.overflow-hidden(href='/signin')
+                img.img-fluid(src='/images/cat-3.jpg' alt='')
+                .bg-white.text-center.position-absolute.bottom-0.end-0.py-2.px-3(style='margin: 1px;')
+                  h5.m-0 Video Editing
+                  small.text-primary 49 Courses
+        .col-lg-5.col-md-6.wow.zoomIn(data-wow-delay='0.7s' style='min-height: 350px;')
+          a.position-relative.d-block.h-100.overflow-hidden(href='/signin')
+            img.img-fluid.position-absolute.w-100.h-100(src='/images/cat-4.jpg' alt='' style='object-fit: cover;')
+            .bg-white.text-center.position-absolute.bottom-0.end-0.py-2.px-3(style='margin:  1px;')
+              h5.m-0 Online Marketing
+              small.text-primary 49 Courses
+    // Categories Start
+    // Courses Start
+    .container-xxl.py-5
+      .container
+        .text-center.wow.fadeInUp(data-wow-delay='0.1s')
+          h6.section-title.bg-white.text-center.text-primary.px-3 Courses
+          h1.mb-5 Popular Courses
+        .row.g-4.justify-content-center
+          .col-lg-4.col-md-6.wow.fadeInUp(data-wow-delay='0.1s')
+            .course-item.bg-light
+              .position-relative.overflow-hidden
+                img.img-fluid(src='/images/course-1.jpg' alt='')
+                .w-100.d-flex.justify-content-center.position-absolute.bottom-0.start-0.mb-4
+                  a.flex-shrink-0.btn.btn-sm.btn-primary.px-3.border-end(href='#' style='border-radius: 30px 0 0 30px;') Read More
+                  a.flex-shrink-0.btn.btn-sm.btn-primary.px-3(href='/signin' style='border-radius: 0 30px 30px 0;') Join Now
+              .text-center.p-4.pb-0
+                h3.mb-0 $49.00
+                .mb-3
+                  small.fa.fa-star.text-primary
+                  small.fa.fa-star.text-primary
+                  small.fa.fa-star.text-primary
+                  small.fa.fa-star.text-primary
+                  small.fa.fa-star.text-primary
+                  small (123)
+                h5.mb-4 Video Editing & Development Course for Beginners
+              .d-flex.border-top
+                small.flex-fill.text-center.border-end.py-2
+                  i.fa.fa-user-tie.text-primary.me-2
+                  | Ricardo Young
+                small.flex-fill.text-center.border-end.py-2
+                  i.fa.fa-clock.text-primary.me-2
+                  | 1.49 Hrs
+                small.flex-fill.text-center.py-2
+                  i.fa.fa-user.text-primary.me-2
+                  | 40 Students
+          .col-lg-4.col-md-6.wow.fadeInUp(data-wow-delay='0.3s')
+            .course-item.bg-light
+              .position-relative.overflow-hidden
+                img.img-fluid(src='/images/course-2.jpg' alt='')
+                .w-100.d-flex.justify-content-center.position-absolute.bottom-0.start-0.mb-4
+                  a.flex-shrink-0.btn.btn-sm.btn-primary.px-3.border-end(href='#' style='border-radius: 30px 0 0 30px;') Read More
+                  a.flex-shrink-0.btn.btn-sm.btn-primary.px-3(href='/signin' style='border-radius: 0 30px 30px 0;') Join Now
+              .text-center.p-4.pb-0
+                h3.mb-0 $59.00
+                .mb-3
+                  small.fa.fa-star.text-primary
+                  small.fa.fa-star.text-primary
+                  small.fa.fa-star.text-primary
+                  small.fa.fa-star.text-primary
+                  small.fa.fa-star.text-primary
+                  small (109)
+                h5.mb-4 Graphic Design & Development Course for Beginners
+              .d-flex.border-top
+                small.flex-fill.text-center.border-end.py-2
+                  i.fa.fa-user-tie.text-primary.me-2
+                  | Nishant Gupta
+                small.flex-fill.text-center.border-end.py-2
+                  i.fa.fa-clock.text-primary.me-2
+                  | 2.49 Hrs
+                small.flex-fill.text-center.py-2
+                  i.fa.fa-user.text-primary.me-2
+                  | 80 Students
+          .col-lg-4.col-md-6.wow.fadeInUp(data-wow-delay='0.5s')
+            .course-item.bg-light
+              .position-relative.overflow-hidden
+                img.img-fluid(src='/images/course-3.jpg' alt='')
+                .w-100.d-flex.justify-content-center.position-absolute.bottom-0.start-0.mb-4
+                  a.flex-shrink-0.btn.btn-sm.btn-primary.px-3.border-end(href='#' style='border-radius: 30px 0 0 30px;') Read More
+                  a.flex-shrink-0.btn.btn-sm.btn-primary.px-3(href='/signin' style='border-radius: 0 30px 30px 0;') Join Now
+              .text-center.p-4.pb-0
+                h3.mb-0 $99.00
+                .mb-3
+                  small.fa.fa-star.text-primary
+                  small.fa.fa-star.text-primary
+                  small.fa.fa-star.text-primary
+                  small.fa.fa-star.text-primary
+                  small.fa.fa-star.text-primary
+                  small (153)
+                h5.mb-4 Web Design & Development Course for Beginners
+              .d-flex.border-top
+                small.flex-fill.text-center.border-end.py-2
+                  i.fa.fa-user-tie.text-primary.me-2
+                  | Raed Karim
+                small.flex-fill.text-center.border-end.py-2
+                  i.fa.fa-clock.text-primary.me-2
+                  | 4.49 Hrs
+                small.flex-fill.text-center.py-2
+                  i.fa.fa-user.text-primary.me-2
+                  | 145 Students
+    // Courses End

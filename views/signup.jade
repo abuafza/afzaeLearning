@@ -1,0 +1,51 @@
+extends layout
+
+block content
+  .container-fluid.bg-primary.py-5.mb-1.page-header1
+    .container.py-5
+      .row.justify-content-center
+        .col-lg-10.text-center
+          h1.display-3.text-white.animated.slideInDown Sign Up
+          nav(aria-label='breadcrumb')
+            ol.breadcrumb.justify-content-center
+              li.breadcrumb-item
+                a.text-white(href='/index') Home
+              li.breadcrumb-item.text-white.active(aria-current='page') Sign up
+
+  .container-fluid
+  .row
+    .col-lg-6.col-md-6.d-none.d-md-block.image-container
+    .col-lg-6.col-md-6.form-container
+      .col-lg-8.col-md-12.col-sm-9.col-xs-12.form-box.text-center
+        .logo.mb-3
+          h2 Afza e Learning
+        .heading.mb-4
+          h4 Create an account
+        form(action='signup' method='post')
+          .form-input
+            span
+              i.fa.fa-user
+            input(type='text' name='fName' placeholder='Full Name' required='')
+          .form-input
+            span
+              i.fa.fa-envelope
+            input(type='email' name='email' placeholder='Email Address' required='')
+          .form-input
+            span
+              i.fa.fa-lock
+            input(type='password' name='password' placeholder='Password' required='')
+          .row.mb-3
+            .col-12.d-flex
+              .custom-control.custom-checkbox
+                input#cb1.custom-control-input(type='checkbox')
+                label.custom-control-label.text-white(for='cb1') I agree all terms & conditions
+            .text-left.mb-3
+                button.btn(type='submit') Sign up
+            .text-center.mb-2
+                .mb-3.text-dark or register with
+                a.btn.btn-social.btn-facebook(href='') facebook
+                a.btn.btn-social.btn-google(href='') google
+                a.btn.btn-social.btn-twitter(href='') twitter
+            .text-dark
+              | Already have an account  
+              a.login-link(href='/signin') Sign In here

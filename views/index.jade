@@ -1,0 +1,88 @@
+extends layout
+
+block content
+  .container-fluid.p-0.mb-1
+    .owl-carousel.header-carousel.position-relative
+      .owl-carousel-item.position-relative
+        img.img-fluid(src='/images/carousel-1.jpg' alt='')
+        .position-absolute.top-0.start-0.w-100.h-100.d-flex.align-items-center(style='background: rgba(24, 29, 56, .7);')
+          .container
+            .row.justify-content-start
+              .col-sm-10.col-lg-8
+                h5.text-primary.text-uppercase.mb-3.animated.slideInDown Best Online Courses
+                h1.display-3.text-white.animated.slideInDown The Best Online Learning Platform
+                p.fs-5.text-white.mb-4.pb-2
+                  | Courses designed by experts with real-world practice. Join our global community. It's free.
+                a.btn.btn-primary.py-md-3.px-md-5.me-3.animated.slideInLeft(href='/about') Read More
+                a.btn.btn-light.py-md-3.px-md-5.animated.slideInRight(href='/signin') Join Now
+      .owl-carousel-item.position-relative
+        img.img-fluid(src='/images/carousel-2.jpg' alt='')
+        .position-absolute.top-0.start-0.w-100.h-100.d-flex.align-items-center(style='background: rgba(24, 29, 56, .7);')
+          .container
+            .row.justify-content-start
+              .col-sm-10.col-lg-8
+                h5.text-primary.text-uppercase.mb-3.animated.slideInDown Best Online Courses
+                h1.display-3.text-white.animated.slideInDown Get Educated Online From Your Home
+                p.fs-5.text-white.mb-4.pb-2
+                  | The best way to learn to code.
+                a.btn.btn-primary.py-md-3.px-md-5.me-3.animated.slideInLeft(href='/about') Read More
+                a.btn.btn-light.py-md-3.px-md-5.animated.slideInRight(href='signin') Join Now
+       //- // Carousel End
+
+  section#count_parallax.parallax(data-stellar-background-ratio='0.6' data-stellar-vertical-offset='20')
+    .work.d-flex.align-items-center.py-5
+      .container-fluid.text-primary
+        .row
+          .col-lg-4.d-flex.align-items-center
+          .col-lg-5.d-flex.align-items-center.px-4.py-3
+            .row
+              .text-center.text-lg-start.py-4.pt-lg-0
+                p.display-5 OUR Achievement
+              .container(data-aos='fade-right')
+                .row.g-5
+                  .col-6.text-start
+                    i.fas.fa-briefcase.fa-2x.text-start
+                    h2.text-warning.purecounter(data-purecounter-start='0' data-purecounter-end='2412' data-purecounter-duration='3') 1
+                    p Student
+                  .col-6
+                    i.fas.fa-award.fa-2x
+                    h2.text-warning.purecounter(data-purecounter-start='0' data-purecounter-end='150' data-purecounter-duration='3') 1
+                    p AWARDS
+                  .col-6
+                    i.fas.fa-users.fa-2x
+                    h2.text-warning.purecounter(data-purecounter-start='0' data-purecounter-end='1255' data-purecounter-duration='3') 1
+                    p COMPLETED
+                  .col-6
+                    i.fas.fa-clock.fa-2x
+                    h2.text-warning.purecounter(data-purecounter-start='0' data-purecounter-end='1157' data-purecounter-duration='3') 1
+                    p GOOD REVIEWS
+    //- // service section starts
+  //- section#service
+  //-   h1.heading what we offer?
+  //-   .box-container
+  //-     .box(data-aos='flip-up')
+  //-       img(src='images/service1.svg' alt='')
+  //-       .info
+  //-         h2 skilled teachers
+  //-         p
+  //-           | Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ad officia quas pariatur error nesciunt consectetur voluptatem minima fugit quo!
+  //-     .box(data-aos='flip-down')
+  //-       img(src='images/service2.svg' alt='')
+  //-       .info
+  //-         h2 24x7 hours service
+  //-         p
+  //-           | Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ad officia quas pariatur error nesciunt consectetur voluptatem minima fugit quo!
+  //-     .box(data-aos='flip-up')
+  //-       img(src='images/service3.svg' alt='')
+  //-       .info
+  //-         h2 certificate distribution
+  //-         p
+  //-           | Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ad officia quas pariatur error nesciunt consectetur voluptatem minima fugit quo!
+  //-   //- // service section ends
+  section
+    .container2
+      h1.display-4.text-danger.fw-bold.fst-italic(data-aos='fade-down' data-aos-easing='ease-in-out') Afza e Learning
+      .video-container
+        video(autoplay='' loop='' muted='')
+          source(src='/videos/pexels-mikhail-nilov-7583735.mp4' type='video/mp4')
+

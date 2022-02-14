@@ -1,0 +1,50 @@
+extends layout
+
+block content
+  .container-fluid.bg-primary.py-5.mb-1.page-header4
+    .container.py-5
+      .row.justify-content-center
+        .col-lg-10.text-center
+          h1.display-3.text-white.animated.slideInDown Sign In
+          nav(aria-label='breadcrumb')
+            ol.breadcrumb.justify-content-center
+              li.breadcrumb-item
+                a.text-white(href='/') Home
+              li.breadcrumb-item.text-white.active(aria-current='page') Sign in
+
+  .container-fluid.p-0.mb-5
+    .owl-carousel.header-carousel.position-relative
+      .owl-carousel-item.position-relative
+        img.img-fluid(src='/images/login.jpg' alt='')
+        .position-absolute.top-0.start-0.w-100.h-100.d-flex.align-items-center(style='background: rgba(24, 29, 56, .7);')
+          .container
+            .row.justify-content-start
+              .col-sm-10.col-lg-8
+                h5.text-primary.text-uppercase.mb-3.animated.slideInDown Best Online Courses
+                h1.display-3.text-white.animated.slideInDown Wants to enroll
+                p.fs-5.text-white.mb-4.pb-2 Please Signup or Signin. It's free!
+                a.btn.btn-primary.py-md-3.px-md-5.me-3.animated.slideInLeft(type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasRight' aria-controls='offcanvasRight') Sign in
+                a.btn.btn-light.py-md-3.px-md-5.animated.slideInRight(href='/signup') Sign up
+  #offcanvasRight.offcanvas.offcanvas-end(tabindex='-1' aria-labelledby='offcanvasRightLabel')
+    .offcanvas-header
+      h3#offcanvasRightLabel.text-success.ps-5.mt-5 Afza e Learning
+      button.btn-close.text-reset(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
+    .offcanvas-body
+      form(action='signin' method='post')
+        h1.h3.mb-3.fw-normal Please sign in
+        br
+        .form-floating
+          input#floatingInput.form-control(type='email' name='email' placeholder='name@example.com')
+          label(for='floatingInput') Email address
+        br
+        .form-floating
+          input#floatingPassword.form-control(type='password' name='password' placeholder='Password')
+          label(for='floatingPassword') Password
+        br
+        .checkbox.mb-3
+          label
+            input(type='checkbox' value='remember-me')
+            |  Remember me
+        button.w-100.btn.btn-lg.btn-primary(type='submit') Sign in
+        p=message
+        p.mt-5.mb-3.text-muted.text-center © 2022

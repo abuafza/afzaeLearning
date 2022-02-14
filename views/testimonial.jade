@@ -1,0 +1,50 @@
+extends layout
+
+block content
+  .container-fluid.bg-primary.py-5.mb-5.page-header5
+    .container.py-5
+      .row.justify-content-center
+        .col-lg-10.text-center
+          h1.display-3.text-white.animated.slideInDown Testimonial
+          nav(aria-label='breadcrumb')
+            ol.breadcrumb.justify-content-center
+              li.breadcrumb-item
+                a.text-white(href='/index') Home
+              li.breadcrumb-item.text-white.active(aria-current='page') Testimonial
+    // Header End
+    // Testimonial Start
+  .container-xxl.py-5.wow.fadeInUp(data-wow-delay='0.1s')
+    .container
+      .text-center
+        h6.section-title.bg-white.text-center.text-primary.px-3 Testimonial
+        h1.mb-5 Our Experts Say!
+      .owl-carousel.testimonial-carousel.position-relative
+        .testimonial-item.text-center
+          img.border.rounded-circle.p-2.mx-auto.mb-3(src='/images/testimonial-1.jpg' style='width: 80px; height: 80px;')
+          h5.mb-0 Alfred Helmerich
+          p Executive Training Manager
+          .testimonial-text.bg-light.text-center.p-4
+            p.mb-0
+              | In total, it was a big success, I would get emails about what a fantastic resource it was.
+        .testimonial-item.text-center
+          img.border.rounded-circle.p-2.mx-auto.mb-3(src='/images/testimonial-2.jpg' style='width: 80px; height: 80px;')
+          h5.mb-0 Varun Patil
+          p Senior Manager of HR Development
+          .testimonial-text.bg-light.text-center.p-4
+            p.mb-0
+              | AfzaeLearning fit us like a glove. Their team curates fresh, up-to-date courses from their marketplace and makes them available to customers.
+        .testimonial-item.text-center
+          img.border.rounded-circle.p-2.mx-auto.mb-3(src='/images/testimonial-3.jpg' style='width: 80px; height: 80px;')
+          h5.mb-0 Luz Santillana Romero
+          p Development and Engagement Director
+          .testimonial-text.bg-light.text-center.p-4
+            p.mb-0
+              | AfzaeLearning responds to the needs of the business in an agile and global manner. It’s truly the best solution for our employees and their careers.
+        .testimonial-item.text-center
+          img.border.rounded-circle.p-2.mx-auto.mb-3(src='/images/testimonial-4.jpg' style='width: 80px; height: 80px;')
+          h5.mb-0 The Bill & Melinda Gates Foundation
+          p Manager
+          .testimonial-text.bg-light.text-center.p-4
+            p.mb-0
+              | AfzaeLearning team is “Magic” when it comes to delivering e-learning content. I collaborated with them on a complex, multi-module learning system for a Software 500 client.
+    // Testimonial End

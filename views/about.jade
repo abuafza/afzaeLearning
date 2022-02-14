@@ -1,0 +1,153 @@
+extends layout
+
+block content
+  .container-fluid.bg-primary.py-5.mb-5.page-header
+    .container.py-5
+      .row.justify-content-center
+        .col-lg-10.text-center
+          h1.display-3.text-white.animated.slideInDown About Us
+          nav(aria-label='breadcrumb')
+            ol.breadcrumb.justify-content-center
+              li.breadcrumb-item
+                a.text-white(href='/index') Home
+              li.breadcrumb-item.text-white.active(aria-current='page') About
+    //- // Header End
+    //- // Service Start
+  .container-xxl.py-5
+    .container
+      .row.g-4
+        .col-lg-3.col-sm-6.wow.fadeInUp(data-wow-delay='0.1s')
+          .service-item.text-center.pt-3
+            .p-4
+              i.fa.fa-3x.fa-graduation-cap.text-primary.mb-4
+              h5.mb-3 Skilled Instructors
+              p World class experienced Instructor
+        .col-lg-3.col-sm-6.wow.fadeInUp(data-wow-delay='0.3s')
+          .service-item.text-center.pt-3
+            .p-4
+              i.fa.fa-3x.fa-globe.text-primary.mb-4
+              h5.mb-3 Online Classes
+              p You can access any moments
+        .col-lg-3.col-sm-6.wow.fadeInUp(data-wow-delay='0.5s')
+          .service-item.text-center.pt-3
+            .p-4
+              i.fa.fa-3x.fa-home.text-primary.mb-4
+              h5.mb-3 Home Projects
+              p A lot of hands on project
+        .col-lg-3.col-sm-6.wow.fadeInUp(data-wow-delay='0.7s')
+          .service-item.text-center.pt-3
+            .p-4
+              i.fa.fa-3x.fa-book-open.text-primary.mb-4
+              h5.mb-3 Book Library
+              p This is mobile library
+    //- // Service End
+    //- // About Start
+  .container-xxl.py-5
+    .container
+      .row.g-5
+        .col-lg-6.wow.fadeInUp(data-wow-delay='0.1s' style='min-height: 400px;')
+          .position-relative.h-100
+            img.img-fluid.position-absolute.w-100.h-100(src='/images/about.jpg' alt='' style='object-fit: cover;')
+        .col-lg-6.wow.fadeInUp(data-wow-delay='0.3s')
+          h6.section-title.bg-white.text-start.text-primary.pe-3 About Us
+          h2.mb-4 Welcome to AFZAeLEARNING
+          p.mb-4
+            | Afza elearning is the premier training and skill development organization which was started with a vision to bring world class training content, pedagogy and best learning practices to everyone's doorsteps.
+          p.mb-4
+            | Afza elearning offers easy to understand online courses and workshops for everyday people. If you have ever wanted to learn a new skill, but don't want to attend four years of college to do it, we have a solution for you.
+          .row.gy-2.gx-4.mb-4
+            .col-sm-6
+              p.mb-0
+                i.fa.fa-arrow-right.text-primary.me-2
+                | Skilled Instructors
+            .col-sm-6
+              p.mb-0
+                i.fa.fa-arrow-right.text-primary.me-2
+                | Online Classes
+            .col-sm-6
+              p.mb-0
+                i.fa.fa-arrow-right.text-primary.me-2
+                | International Certificate
+            .col-sm-6
+              p.mb-0
+                i.fa.fa-arrow-right.text-primary.me-2
+                | Easy to access
+            .col-sm-6
+              p.mb-0
+                i.fa.fa-arrow-right.text-primary.me-2
+                | Lots of practice
+            .col-sm-6
+              p.mb-0
+                i.fa.fa-arrow-right.text-primary.me-2
+                | Easy to learn
+          a.btn.btn-primary.py-3.px-5.mt-2(href='/signin') Read More
+    //- // About End
+    //- // Team Start
+    .container-xxl.py-5
+      .container
+        .text-center.wow.fadeInUp(data-wow-delay='0.1s')
+          h6.section-title.bg-white.text-center.text-primary.px-3 Instructors
+          h1.mb-5 Expert Instructors
+        .row.g-4
+          .col-lg-3.col-md-6.wow.fadeInUp(data-wow-delay='0.1s')
+            .team-item.bg-light
+              .overflow-hidden
+                img.img-fluid(src='/images/team-1.jpg' alt='')
+              .position-relative.d-flex.justify-content-center(style='margin-top: -23px;')
+                .bg-light.d-flex.justify-content-center.pt-2.px-1
+                  a.btn.btn-sm-square.btn-primary.mx-1(href='')
+                    i.fab.fa-facebook-f
+                  a.btn.btn-sm-square.btn-primary.mx-1(href='')
+                    i.fab.fa-twitter
+                  a.btn.btn-sm-square.btn-primary.mx-1(href='')
+                    i.fab.fa-instagram
+              .text-center.p-4
+                h5.mb-0 Ricardo Young
+                small Web Design
+          .col-lg-3.col-md-6.wow.fadeInUp(data-wow-delay='0.3s')
+            .team-item.bg-light
+              .overflow-hidden
+                img.img-fluid(src='/images/team-2.jpg' alt='')
+              .position-relative.d-flex.justify-content-center(style='margin-top: -23px;')
+                .bg-light.d-flex.justify-content-center.pt-2.px-1
+                  a.btn.btn-sm-square.btn-primary.mx-1(href='')
+                    i.fab.fa-facebook-f
+                  a.btn.btn-sm-square.btn-primary.mx-1(href='')
+                    i.fab.fa-twitter
+                  a.btn.btn-sm-square.btn-primary.mx-1(href='')
+                    i.fab.fa-instagram
+              .text-center.p-4
+                h5.mb-0 Nishant Gupta
+                small Networking
+          .col-lg-3.col-md-6.wow.fadeInUp(data-wow-delay='0.5s')
+            .team-item.bg-light
+              .overflow-hidden
+                img.img-fluid(src='/images/team-3.jpg' alt='')
+              .position-relative.d-flex.justify-content-center(style='margin-top: -23px;')
+                .bg-light.d-flex.justify-content-center.pt-2.px-1
+                  a.btn.btn-sm-square.btn-primary.mx-1(href='')
+                    i.fab.fa-facebook-f
+                  a.btn.btn-sm-square.btn-primary.mx-1(href='')
+                    i.fab.fa-twitter
+                  a.btn.btn-sm-square.btn-primary.mx-1(href='')
+                    i.fab.fa-instagram
+              .text-center.p-4
+                h5.mb-0 Raed Karim
+                small Operating System
+          .col-lg-3.col-md-6.wow.fadeInUp(data-wow-delay='0.7s')
+            .team-item.bg-light
+              .overflow-hidden
+                img.img-fluid(src='/images/team-4.jpg' alt='')
+              .position-relative.d-flex.justify-content-center(style='margin-top: -23px;')
+                .bg-light.d-flex.justify-content-center.pt-2.px-1
+                  a.btn.btn-sm-square.btn-primary.mx-1(href='')
+                    i.fab.fa-facebook-f
+                  a.btn.btn-sm-square.btn-primary.mx-1(href='')
+                    i.fab.fa-twitter
+                  a.btn.btn-sm-square.btn-primary.mx-1(href='')
+                    i.fab.fa-instagram
+              .text-center.p-4
+                h5.mb-0 Mukesh Potuganti
+                small DevOps
+    //- // Team End
+

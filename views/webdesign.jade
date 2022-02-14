@@ -1,0 +1,128 @@
+extends layout
+
+block content
+  
+  .container-fluid.bg-primary.py-5.mb-5.page-header6
+    .container.py-5
+      .row.justify-content-center
+        .col-lg-10.text-center
+          h1.display-3.text-white.animated.slideInDown Courses
+          nav(aria-label='breadcrumb')
+            ol.breadcrumb.justify-content-center
+              li.breadcrumb-item
+                a.text-white(href='/index') Home
+              li.breadcrumb-item
+                a.text-white(href='/course') Course
+              li.breadcrumb-item.text-white.active(aria-current='page') Web Design
+    //- // Header End
+  section.about-course.py-5
+    .container-md
+      h1.course-name Web Design
+      h6.course-lecturer.mb-3
+        | Instructor: 
+        a(href='#') Ricardo Young
+      .row.g-5.justify-content-center.align-items-start
+        .col-md-6
+          img.w-100(src='/images/pen-c-vat-li-1579707989.png' alt='...')
+        .col-md-6.course-info
+          p.mb-2
+            i.fas.fa-angle-double-right
+            |  Price: 
+            span $ 99.00
+          p.mb-2
+            i.fas.fa-angle-double-right
+            |  Number of lectures: 
+            span 115
+          p.mb-2
+            i.fas.fa-angle-double-right
+            |  Duration: 
+            span 4.49 Hrs
+          div
+            span Course Description: 
+            p.mb-2
+              | You can achieve anything if you put your mind to it, and learning web design on your own is not an exception. The resources you need are readily available online and in the market, but it is up to you to apply your knowledge and improve your skills further through constant practice and application.
+          a.btn.btn-success.course-register-btn(href='/signin') Register Now
+
+         //- // ===============Video course content section=================
+
+  section.video-course-content.py-5.section-bg
+    .container-md
+      h2 course content
+      .row
+        .col-sm-12.co-md-10.col-lg-8
+          #course-content.accordion.accordion-flush
+            .accordion-item.chapter.chapter-one
+              h2#headingOne.accordion-header
+                button.accordion-button.py-3(type='button' data-bs-toggle='collapse' data-bs-target='#collapseOne' aria-expanded='true' aria-controls='panelsStayOpen-collapseOne')
+                  | Chapter 1: Overview of Website Design.
+              #collapseOne.accordion-collapse.collapse.show(aria-labelledby='headingOne')
+                .accordion-body.video-show
+                  ul
+                    li
+                      a(href='https://www.udemy.com/course/html-web-development-skills/learn/lecture/28121672#overview')
+                        h6
+                          i.fas.fa-bolt
+                          |  Introduction to HTML.
+                        span
+                          i.fas.fa-play-circle
+                          |  5 Min
+                      hr
+                    li
+                      a(href='https://www.udemy.com/course/html-web-development-skills/learn/lecture/28121688#overview')
+                        h6
+                          i.fas.fa-bolt
+                          |  Overview of HTML.
+                        span
+                          i.fas.fa-play-circle
+                          |  2 Min
+                      hr
+                    li
+                      a(href='https://www.udemy.com/course/html-web-development-skills/learn/lecture/28121690#overview')
+                        h6
+                          i.fas.fa-bolt
+                          |  Headings, Paragraphs and Breaks.
+                        span
+                          i.fas.fa-play-circle
+                          |  10 Min
+                      hr
+            .accordion-item.chapter.chapter-two
+              h2#headingTwo.accordion-header
+                button.accordion-button.py-3(type='button' data-bs-toggle='collapse' data-bs-target='#collapseTwo' aria-expanded='true' aria-controls='panelsStayOpen-collapseTwo')
+                  | Chapter 2: Details of Website Design.
+              #collapseTwo.accordion-collapse.collapse.show(aria-labelledby='headingTwo')
+                .accordion-body.video-show
+                  ul
+                    li
+                      a(href='https://www.udemy.com/course/html-web-development-skills/learn/lecture/28121700#overview')
+                        h6
+                          i.fas.fa-bolt
+                          |  Character formatting.
+                        span
+                          i.fas.fa-play-circle
+                          |  5 Min
+                      hr
+                    li
+                      a(href='https://www.udemy.com/course/html-web-development-skills/learn/lecture/28121702#overview')
+                        h6
+                          i.fas.fa-bolt
+                          |  Lists.
+                        span
+                          i.fas.fa-play-circle
+                          |  2 Min
+                      hr
+
+     //-   // ================Feedback section========================
+  section.feedback.py-5
+    .container-md
+      h2 Evaluate
+      div
+        h3 Average rating
+        .single-chart
+          svg.circular-chart(viewBox='0 0 36 36')
+            path.circle-bg(d='M18 2.0845\
+            a 15.9155 15.9155 0 0 1 0 31.831\
+            a 15.9155 15.9155 0 0 1 0 -31.831')
+            path.circle(stroke-dasharray='95, 100' d='M18 2.0845\
+            a 15.9155 15.9155 0 0 1 0 31.831\
+            a 15.9155 15.9155 0 0 1 0 -31.831')
+            text.score(x='18' y='22') 9.5
