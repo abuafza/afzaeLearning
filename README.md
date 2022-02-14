@@ -24,3 +24,4 @@ There is few step for run this project (This is Express.js project)
     i) npm install nodemailer
 For Project run npm start
     
+3. Live project view: https://afzaelearning.azurewebsites.net/
